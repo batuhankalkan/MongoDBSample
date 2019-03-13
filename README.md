@@ -1,5 +1,6 @@
 # Asp.Net Core MongoDB async generic repository
-Asp.Net Core MongoDB async generic repository sample
+
+Mongo db sample is written with .net core
 
 
 Dependencies
