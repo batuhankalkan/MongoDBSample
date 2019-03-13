@@ -4,7 +4,7 @@ A sample of async generic repository implementation using  MongoDB driver
 
 Usage
 -----
-We created base repository and all custom repositories will implementation that base repository as shown below
+We created base repository and all custom repositories will implement that base repository as shown below
 
 ```csharp
 using Microsoft.Extensions.Options;
