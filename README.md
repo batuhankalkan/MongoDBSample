@@ -1,4 +1,4 @@
-# Asp.Net Core Webapi MongoDB async generic repository
+# Asp.Net Core MongoDB async generic repository
 
 An example of async generic repository implementation using  MongoDB driver 
 
