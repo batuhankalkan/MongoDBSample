@@ -19,6 +19,8 @@ namespace MongoDBSample.Repository
         {
             this.context = new DbContext<SampleModel>(configuration);
         }
+
+        // add custom methods
     }
 }
 ```
