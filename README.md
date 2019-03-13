@@ -4,7 +4,7 @@ An example of async generic repository implementation using  MongoDB driver
 
 usage
 -----
-```
+```csharp
 using Microsoft.Extensions.Options;
 using MongoDBSample.Domain;
 using MongoDBSample.Domain.Settings;
