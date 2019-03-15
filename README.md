@@ -13,13 +13,13 @@ using MongoDBSample.Domain.Settings;
 
 namespace MongoDBSample.Repository
 {
-    public class SampleRepository : BaseRepository<SampleModel>, ISampleRepository
+     public class SampleRepository : BaseRepository<SampleModel>, ISampleRepository
     { 
-        private readonly DbContext<SampleModel> context = null;
+        private readonly IDbContext<SampleModel> context;
 
-        public SampleRepository(IOptions<DbConfiguration> configuration) : base(configuration)
+        public SampleRepository(IDbContext<SampleModel> context) : base(context)
         {
-            this.context = new DbContext<SampleModel>(configuration);
+            this.context = context;
         }
 
         // add custom methods
