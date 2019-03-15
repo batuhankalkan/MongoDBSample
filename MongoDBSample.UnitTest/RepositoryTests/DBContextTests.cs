@@ -6,7 +6,7 @@ using MongoDBSample.Repository;
 using NUnit.Framework;
 using System;
 
-namespace MongoDBSample.UnitTest.Repository
+namespace MongoDBSample.UnitTest.RepositoryTests
 {
     [TestFixture]
     public class DBContextTests

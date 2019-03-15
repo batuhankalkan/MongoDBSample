@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using MongoDBSample.Domain;
-using MongoDBSample.Domain.Settings;
+﻿using MongoDBSample.Domain;
 
 namespace MongoDBSample.Repository
 {
