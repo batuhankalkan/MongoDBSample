@@ -1,8 +1,6 @@
-﻿using Microsoft.Extensions.Options;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDBSample.Domain;
-using MongoDBSample.Domain.Settings;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,11 +9,11 @@ namespace MongoDBSample.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity, string> where TEntity : IEntity
     {
-        private readonly DbContext<TEntity> context = null;
+        private readonly IDbContext<TEntity> context;
 
-        public BaseRepository(IOptions<DbConfiguration> configuration)
+        public BaseRepository(IDbContext<TEntity> context)
         {
-            this.context = new DbContext<TEntity>(configuration);
+            this.context = context;
         }
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {

@@ -1,11 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MongoDBSample.Domain.Settings;
-using System;
 
 namespace MongoDBSample.Repository
 {
-    public class DbContext<TEntity>
+    public class DbContext<TEntity> : IDbContext<TEntity>
     {
         private readonly IMongoDatabase database = null;
 

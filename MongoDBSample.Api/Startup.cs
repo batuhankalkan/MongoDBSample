@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoDBSample.Domain;
 using MongoDBSample.Domain.Settings;
 using MongoDBSample.Repository;
 
@@ -25,7 +26,8 @@ namespace MongoDBSample.Api
                 options.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
                 options.Database = Configuration.GetSection("MongoConnection:Database").Value;
             });
-            services.AddTransient<ISampleRepository, SampleRepository>();
+            services.AddSingleton<IDbContext<SampleModel>, DbContext<SampleModel>>();
+            services.AddSingleton<ISampleRepository, SampleRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
