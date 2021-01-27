@@ -32,4 +32,5 @@ Dependencies
 * .NET Core 2.2
 * MongoDB.Driver 2.7.3
 * NUnit 3.11.0
+* NSubstitute 4.2.2
 
