@@ -20,7 +20,6 @@ namespace MongoDBSample.AcceptanceTest.ApiTests
         public IDbContext<SampleModel> context { get; set; }
         public FilterDefinition<SampleModel> filter { get; set; }
 
-
         public SampleControllerTests()
         {
             this.factory = this;
@@ -60,7 +59,6 @@ namespace MongoDBSample.AcceptanceTest.ApiTests
             // ASSERT
             Assert.AreEqual(true, response.IsSuccessStatusCode);
 
-            var filter = Builders<SampleModel>.Filter.Eq(_ => _.Id, "1");
             await this.context
                 .Received(1)
                 .Entity.Find(this.filter)
